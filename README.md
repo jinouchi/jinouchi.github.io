@@ -1,2 +1,2 @@
-# cs230
+# cit230
 Web Frontend Development
