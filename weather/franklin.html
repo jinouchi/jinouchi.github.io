@@ -11,67 +11,55 @@
 </head>
 
 <body>
-	<header>
-		<table>
-			<tr>
-				<td><img src="images/logo.jpg" alt="Logo" height="50"></td>
-				<td>
-					<h1>The Weather Site</h1>
-				</td>
-			</tr>
-		</table>
+	<header id="page-header">
+		<!--<div id="logo"></div>-->
+		<p id="site-brand">&#9748; The Weather Site</p>
+	 </header>
 
-	</header>
-	<nav>
-		<ul>
-			<li><a href="#" title="Go to the Weather Site home page">Current</a></li>
-			<li><a href="#" title="Current Conditions">Search</a></li>
-			<li><a href="#" title="Franklin, ID">Franklin</a></li>
-			<li><a href="#" title="Greenville, ID">Greenville</a></li>
-		</ul>
-	</nav>
 	<main>
-		<h1>Franklin, Idaho</h1>
-		<p><strong>Zip: </strong> 83237 | <strong>Elevation: </strong>1514.246 ft. | <strong>Location: </strong>42.07&deg; N,
+		<h1 id="city">Franklin, Idaho</h1>
+		<p id="cityInfo"><strong>Zip: </strong> 83237 | <strong>Elevation: </strong>1514.246 ft. | <strong>Location: </strong>42.07&deg; N,
 			111.79&deg; W</p>
 
-		<section id="Temperature">
+		<section id="Temperature" class="tile">
+			<p></p>
 			<h2>Temperature</h2>
-			<div id="temp">40&deg;F</div>
-			<div id="high">64&deg;F</div>
-			<div id="low">41&deg;F</div>
-			<div id="feelsLike"></div>
+			<p></p>
+			<p id="temp">40&deg;F</p>
+			<p><span id="high">64&deg;F</span> <span id="low">41&deg;F</span></p>
+			<p id="feelsLike">Feels Like 25&deg;F</p>
 		</section>
 
-		<section id="Wind">
+		<section id="Wind" class="tile">
 			<h2>Wind</h2>
-			<img src="images/wind-pointer.png" alt="Wind Direction">
-			<div id="WindSpeed">5 mph</div>
-			<div id="WindDirection"><strong>Direction:</strong>SW</div>
-			<div id="Gusts"><strong>Gusts: </strong>10-12 mph</div>
+			<div class="windImg">
+			<img src="images/wind-pointer.png" id="windDir" alt="Wind Direction">
+			<p class="centered">5 mph</p></div>
+			<p id="windInfo"><strong>Direction:</strong>SW<br>
+			<strong>Gusts: </strong>10-12 mph</p>
 		</section>
 
-		<section id="CurrentConditions">
+		<section id="CurrentConditions" class="tile">
 			<h2 id="Summary">Rain</h2>
-			<img src="images/rain.jpg" alt="Rain" width="500">
+			<img src="images/rain.jpg" alt="Rain" width="80%">
 		</section>
 
-		<section id="HourlyForecast">
+		<section id="HourlyForecast" class="tile">
 			<h2>Hourly Forecast</h2>
 			<ul>
-				<li>11am 41&deg;F</li>
-				<li>12am 41&deg;F</li>
-				<li>1pm 41&deg;F</li>
-				<li>2pm 41&deg;F</li>
-				<li>3pm 41&deg;F</li>
-				<li>4pm 41&deg;F</li>
-				<li>5pm 42&deg;F</li>
-				<li>6pm 44&deg;F</li>
-				<li>7pm 44&deg;F</li>
-				<li>8pm 46&deg;F</li>
-				<li>9pm 49&deg;F</li>
-				<li>10pm 51&deg;F</li>
-				<li>11pm 55&deg;F</li>
+				<li>11am: 41&deg;F | </li>
+				<li>12am: 41&deg;F | </li>
+				<li>1pm: 41&deg;F | </li>
+				<li>2pm: 41&deg;F | </li>
+				<li>3pm: 41&deg;F | </li>
+				<li>4pm: 41&deg;F | </li>
+				<li>5pm: 42&deg;F | </li>
+				<li>6pm: 44&deg;F | </li>
+				<li>7pm: 44&deg;F | </li>
+				<li>8pm: 46&deg;F | </li>
+				<li>9pm: 49&deg;F | </li>
+				<li>10pm: 51&deg;F | </li>
+				<li>11pm: 55&deg;F</li>
 			</ul>
 		</section>
 
@@ -80,6 +68,15 @@
 		&copy; &mdash; 2019, The Weather Site
 	</footer>
 
+	<nav>
+		<ul>
+			<li><a href="#" title="Go to the Weather Site home page">Current</a></li>
+			<li><a href="#" title="Current Conditions">Search</a></li>
+			<li><a href="#" title="Franklin, ID">Franklin</a></li>
+			<li><a href="#" title="Greenville, ID">Greenville</a></li>
+		</ul>
+	</nav>
+	
 </body>
 
 </html>
