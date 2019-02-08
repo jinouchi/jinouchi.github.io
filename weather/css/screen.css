@@ -119,6 +119,7 @@ footer {
 
 #windDir {
 	transform: rotate(-45deg);
+	width: 50%;
 }
 
 #HourlyForecast ul li {
@@ -150,4 +151,9 @@ footer {
 	text-align: center;
 	color: white;
 	margin: 10px;
+  }
+
+  #CurrentConditions img {
+	  width: 80%;
+	  margin-top: 20px;
   }
