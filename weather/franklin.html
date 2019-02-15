@@ -15,26 +15,40 @@
 		<!--<div id="logo"></div>-->
 		<p id="site-brand">&#9748; The Weather Site</p>
 	 </header>
-
-	<main>
+	
+	 <nav id="page-nav">
+		<ul id="nav-list">
+			<li><a href="#" title="Go to the Weather Site home page">Current</a></li>
+			<li><a href="#" title="Current Conditions">Search</a></li>
+			<li><a href="#" title="Franklin, ID">Franklin</a></li>
+			<li><a href="#" title="Greenville, ID">Greenville</a></li>
+		</ul>
+	</nav>
+	
+	<header>
 		<h1 id="city">Franklin, Idaho</h1>
-		<p id="cityInfo"><strong>Zip: </strong> 83237 | <strong>Elevation: </strong>1514.246 ft. | <strong>Location: </strong>42.07&deg; N,
+			<p id="cityInfo"><strong>Zip: </strong> 83237 | <strong>Elevation: </strong>1514.246 ft. | <strong>Location: </strong>42.07&deg; N,
 			111.79&deg; W</p>
+		</header>
+
+		<main>
 
 		<section id="Temperature" class="tile">
-			<p></p>
 			<h2>Temperature</h2>
 			<p></p>
+			<div id="tempBox">
 			<p id="temp">40&deg;F</p>
 			<p><span id="high">64&deg;F</span> <span id="low">41&deg;F</span></p>
 			<p id="feelsLike">Feels Like 25&deg;F</p>
+		</div>
 		</section>
 
 		<section id="Wind" class="tile">
 			<h2>Wind</h2>
 			<div class="windImg">
-			<img src="images/wind-pointer.png" id="windDir" alt="Wind Direction">
-			<p class="centered">5 mph</p></div>
+				<img src="images/wind-pointer.png" id="windDir" alt="Wind Direction">
+				<p class="centered">5 mph</p>
+			</div>
 			<p id="windInfo"><strong>Direction:</strong>SW<br>
 			<strong>Gusts: </strong>10-12 mph</p>
 		</section>
@@ -46,20 +60,20 @@
 
 		<section id="HourlyForecast" class="tile">
 			<h2>Hourly Forecast</h2>
-			<ul>
+			<ul id="hourly-forecast-list">
 				<li>11am: 41&deg;F | </li>
-				<li>12am: 41&deg;F | </li>
-				<li>1pm: 41&deg;F | </li>
-				<li>2pm: 41&deg;F | </li>
-				<li>3pm: 41&deg;F | </li>
-				<li>4pm: 41&deg;F | </li>
-				<li>5pm: 42&deg;F | </li>
-				<li>6pm: 44&deg;F | </li>
-				<li>7pm: 44&deg;F | </li>
-				<li>8pm: 46&deg;F | </li>
-				<li>9pm: 49&deg;F | </li>
-				<li>10pm: 51&deg;F | </li>
-				<li>11pm: 55&deg;F</li>
+				<li>&nbsp;12am: 41&deg;F | </li>
+				<li>&nbsp;2pm: 41&deg;F | </li>
+				<li>&nbsp;3pm: 41&deg;F | </li>
+				<li>&nbsp;1pm: 41&deg;F | </li>
+				<li>&nbsp;4pm: 41&deg;F | </li>
+				<li>&nbsp;5pm: 42&deg;F | </li>
+				<li>&nbsp;6pm: 44&deg;F | </li>
+				<li>&nbsp;7pm: 44&deg;F | </li>
+				<li>&nbsp;8pm: 46&deg;F | </li>
+				<li>&nbsp;9pm: 49&deg;F | </li>
+				<li>&nbsp;10pm: 51&deg;F | </li>
+				<li>&nbsp;11pm: 55&deg;F</li>
 			</ul>
 		</section>
 
@@ -67,15 +81,6 @@
 	<footer>
 		&copy; &mdash; 2019, The Weather Site
 	</footer>
-
-	<nav>
-		<ul>
-			<li><a href="#" title="Go to the Weather Site home page">Current</a></li>
-			<li><a href="#" title="Current Conditions">Search</a></li>
-			<li><a href="#" title="Franklin, ID">Franklin</a></li>
-			<li><a href="#" title="Greenville, ID">Greenville</a></li>
-		</ul>
-	</nav>
 
 </body>
 

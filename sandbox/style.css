@@ -1,0 +1,16 @@
+/* Mobile Styles */
+body {
+	background-color: yellow;
+}
+
+/* Larger Styles  */
+@media screen and (min-width: 700px) {
+	body {
+			background-color: blue;
+	}
+
+	ul {
+		display: flex;
+		list-style: none;
+	}
+}

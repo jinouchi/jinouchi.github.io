@@ -34,6 +34,14 @@ html {
 body {
 	font-family: helvetica, verdana, sans-serif;
 	font-size: 20px;
+	background-image: url("images/rain.jpg"); 			/*Not working*/
+	background-size: 100%;
+}
+
+#page-header {
+	display: flex;
+	width: 100%;
+	overflow-wrap: initial
 }
 
 h1,
@@ -56,9 +64,9 @@ h6 {
 }
 
 nav ul li {
-	display: inline-block;
+	display: flex;
 	list-style: none;
-	padding: 10px;
+	padding: 0px;
 	vertical-align: center;
 }
 
@@ -67,29 +75,38 @@ nav ul li a {
 	text-decoration: none;
 }
 
-nav {
-	position: relative;
+#page-nav {
+	position: fixed;
 	bottom: 0;
 	left: 0;
 	background-color: #0e89d5;
 	width: 100%;
 	font-size: 16px;
 	text-align: center;
-	vertical-align: center;
 	z-index: 100;
 }
 
+#nav-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding: 0px;
+	margin: 20px;
+}
+
 footer {
-	margin-bottom: 0em;
+	margin-bottom: 4em;
 	font-size: 20px;
 	background-color: #0e89d5;
 }
 
 #site-brand {
-	font-size: 2em;
+	font-size: 1.8em;
 	font-weight: 600;
 	background-color: #0e89d5;
 	margin: 0px;
+	padding: 0px;
+	width: 100%;
   }
 
 #temp {
@@ -118,10 +135,7 @@ footer {
 	margin: 5px;
 }
 
-#windDir {
-	transform: rotate(-45deg);
-	width: 50%;
-}
+
 
 #HourlyForecast ul li {
 	display: inline-block;
@@ -137,6 +151,16 @@ footer {
 	margin: 0px;
 }
 
+#hourly-forecast-list {
+	display: flex;
+	flex-flow: row nowrap;
+	overflow: auto;
+}
+
+#hourly-forecast-list li {
+	flex-shrink: 0;
+}
+
 /* Centered text */
 .centered {
 	position: absolute;
@@ -150,11 +174,80 @@ footer {
   .windImg {
 	position: relative;
 	text-align: center;
-	color: white;
 	margin: 10px;
   }
 
+#windDir {
+	transform: rotate(-135deg);
+	width: 50%;
+}
+
   #CurrentConditions img {
-	  width: 80%;
+	  width: 90%;
 	  margin-top: 20px;
   }
+
+ /*  3.  Mobile First (styles specific to small screens) */
+
+ /*  4.  Large Screen Styles (Media Queries begin here */
+ @media screen and (min-width: 700px) {
+	#page-nav {
+	position: relative;
+	margin-top: 0px;
+ 	} 
+ 
+	#nav-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding: 15px;
+	margin: 0px;
+	}
+
+	#Temperature{
+		width: 33.33%;
+	}
+	
+	#Wind{
+		width: 33.33%;
+	}
+	
+	#CurrentConditions{
+		width: 33.33%;
+	}
+	
+	main {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	#site-brand {
+		font-size: 3em;
+	}
+
+	#cityInfo {
+		font-size: 20px;
+	}
+
+	#HourlyForecast {
+		width: 100%;
+	}
+	
+	nav ul li {
+		font-size: 16pt;	
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#Temperature {
+		position: relative;
+	}
+	
+	#tempBox {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
