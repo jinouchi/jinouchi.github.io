@@ -1,0 +1,19 @@
+div {
+	border: 1px solid black;
+	padding: 5px;
+	display: inline-block;
+	margin: 5px;
+}
+
+@media screen and (max-width: 1249px) {
+	.large {
+		display: none;
+	}
+
+}
+
+@media screen and (min-width: 1250px) {
+	.small {
+		display: none;
+	}
+}
