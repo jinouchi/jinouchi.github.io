@@ -12,7 +12,6 @@
 
 <body>
 	<header id="page-header">
-		<!--<div id="logo"></div>-->
 		<p id="site-brand">&#9748; The Weather Site</p>
 	</header>
 
@@ -28,8 +27,8 @@
 	<header>
 		<h1 id="city">Franklin, Idaho</h1>
 		<p id="cityInfo">
-			<strong>Zip: </strong> 83237 | 
-			<strong>Elevation: </strong><span id="elevationMeters">1514.246</span> <span id="elevationUnit">ft.</span> | 
+			<strong>Zip: </strong> 83237 |
+			<strong>Elevation: </strong><span id="elevationMeters">1514.246</span> <span id="elevationUnit">ft.</span> |
 			<strong>Location: </strong>42.07&deg; N, 111.79&deg; W
 		</p>
 	</header>
@@ -42,19 +41,21 @@
 				<div class="tempBox">
 					<p id="temp">40&deg;F</p>
 					<p><span id="high">64&deg;F</span> <span id="low">41&deg;F</span></p>
-					<p id="feelsLike">Feels Like <span id="feelTemp">
-							<!--Determined by JavaScript--></span>&deg;F</p>
+					<p id="feelsLike">Feels Like <span id="feelTemp"><!--Determined by JavaScript--></span>&deg;F</p>
 				</div>
 			</section>
 
 			<section id="Wind" class="tile">
 				<h2>Wind</h2>
 				<div class="tempBox">
-				<div id="dial" class="nw"></div>
-				<p id="windInfo"><strong>Direction:</strong><span id="dialDir">ne</span><br>
+					<div id=dialAndSpeed>
+						<div id="dial"></div>
+						<p id="windSpeed">2 mph</p>
+					</div>				
+					<p id="windInfo"><strong>Direction:</strong><span id="dialDir">ne</span><br>
 					<strong>Gusts: </strong>10-12 mph</p>
 				</div>
-				</section>
+			</section>
 
 			<section id="CurrentConditions" class="tile">
 				<h2 id="Summary">Clear</h2>

@@ -42,10 +42,6 @@ html {
 	width: 100%;
 }
 
-#HourlyForecast {
-	width: 100%;
-}
-
 #page-header {
 	display: flex;
 	width: 100%;
@@ -141,6 +137,7 @@ footer {
 	background-position-x: center;
 	background-size: contain;
 }
+
 /* Background pictures for summary */  /* not working super great */
 .backgroundclear	{background-image: url("/weather/images/clear.jpg");}
 .backgroundclouds	{background-image: url("/weather/images/clouds.jpg");}
@@ -153,6 +150,10 @@ footer {
 .summaryrain 	{content: url("/weather/images/rain_400.jpg");}
 .summarysnow 	{content: url("/weather/images/snow_400.jpg");}
 .summaryfog 	{content: url("/weather/images/fog_400.jpg");}
+
+#HourlyForecast {
+	width: 100%;
+}
 
 #hourly-forecast-list {
 	display: flex;
@@ -183,12 +184,6 @@ footer {
 	margin-top: 10px;
    }
 
-/* .windImg {
-	position: relative;
-	text-align: center;
-	margin: 10px;
-} */
-
 #windDir {
 	transform: rotate(-135deg);
 	width: 50%;
@@ -203,6 +198,18 @@ footer {
 .sw	{transform: rotate(225deg);}
 .w	{transform: rotate(270deg);}
 .nw	{transform: rotate(320deg);}
+
+#dialAndSpeed {
+	position: relative;
+}
+
+	#windSpeed {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin: 0px;
+	}
 
 #CurrentConditions img {
 	width: 90%;
@@ -253,6 +260,7 @@ nav ul li {
 #Wind{
 	width: 100%;
 	position: relative;
+	vertical-align: center;
 }
 
 #Summary{
