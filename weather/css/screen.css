@@ -142,37 +142,17 @@ footer {
 	background-size: contain;
 }
 /* Background pictures for summary */  /* not working super great */
-.backgroundclear {
-	background-image: url("/weather/images/clear.jpg");
-	}
-.backgroundclouds {
-	background-image: url("/weather/images/clouds.jpg");
-   }
-.backgroundrain {
-	background-image: url("/weather/images/rain.jpg");
-   }
-.backgroundsnow {
-	background-image: url("/weather/images/snow.jpg");
-   }
-.backgroundfog {
-	background-image: url("/weather/images/fog.jpg");
-   }
+.backgroundclear	{background-image: url("/weather/images/clear.jpg");}
+.backgroundclouds	{background-image: url("/weather/images/clouds.jpg");}
+.backgroundrain		{background-image: url("/weather/images/rain.jpg");}
+.backgroundsnow 	{background-image: url("/weather/images/snow.jpg");}
+.backgroundfog 		{background-image: url("/weather/images/fog.jpg");}
 
-.summaryclear {
-	content: url("/weather/images/clear_400.jpg");
-	}
-.summaryclouds {
-	content: url("/weather/images/clouds_400.jpg");
-   }
-.summaryrain {
-	content: url("/weather/images/rain_400.jpg");
-   }
-.summarysnow {
-	content: url("/weather/images/snow_400.jpg");
-   }
-.summaryfog {
-	content: url("/weather/images/fog_400.jpg");
-   }
+.summaryclear 	{content: url("/weather/images/clear_400.jpg");}
+.summaryclouds 	{content: url("/weather/images/clouds_400.jpg");}
+.summaryrain 	{content: url("/weather/images/rain_400.jpg");}
+.summarysnow 	{content: url("/weather/images/snow_400.jpg");}
+.summaryfog 	{content: url("/weather/images/fog_400.jpg");}
 
 #hourly-forecast-list {
 	display: flex;
@@ -215,31 +195,14 @@ footer {
 }
 
 /* wind pointer direction */
-.n {
-	transform: rotate(0deg);
-}
-.ne {
-	transform: rotate(45deg);
-}
-.e {
-	transform: rotate(90deg);
-}
-.se {
-	transform: rotate(135deg);
-}
-.s {
-	transform: rotate(180deg);
-}
-.sw {
-	transform: rotate(225deg);
-}
-.w {
-	transform: rotate(270deg);
-}
-.nw {
-	transform: rotate(320deg);
-}
-
+.n	{transform: rotate(0deg);}
+.ne	{transform: rotate(45deg);}
+.e	{transform: rotate(90deg);}
+.se	{transform: rotate(135deg);}
+.s	{transform: rotate(180deg);}
+.sw	{transform: rotate(225deg);}
+.w	{transform: rotate(270deg);}
+.nw	{transform: rotate(320deg);}
 
 #CurrentConditions img {
 	width: 90%;
@@ -304,16 +267,16 @@ nav ul li {
 
 @media screen and (min-width: 700px) {
 	#page-nav {
-	position: relative;
-	margin-top: 0px;
+		position: relative;
+		margin-top: 0px;
  	} 
  
 	#nav-list {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	padding: 15px;
-	margin: 0px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		padding: 15px;
+		margin: 0px;
 	}
 
 	#curWeather{
@@ -350,22 +313,12 @@ nav ul li {
 		font-size: 16pt;	
 	}
 
-/* Background pictures for summary */
-.clear {
-	background-image: url("/weather/images/clear.jpg");
-   }
-.clouds {
-	background-image: url("/weather/images/clouds.jpg");
-   }
-.rain {
-	background-image: url("/weather/images/rain.jpg");
-   }
-.snow {
-	background-image: url("/weather/images/snow.jpg");
-   }
-.fog {
-	background-image: url("/weather/images/fog.jpg");
-   }
+	/* Background pictures for summary */
+	.clear	{background-image: url("/weather/images/clear.jpg");}
+	.clouds	{background-image: url("/weather/images/clouds.jpg");}
+	.rain	{background-image: url("/weather/images/rain.jpg");}
+	.snow	{background-image: url("/weather/images/snow.jpg");}
+	.fog	{background-image: url("/weather/images/fog.jpg");}
 }
 
 
