@@ -3,8 +3,8 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title id="pageTitle">Franklin, ID | Weather</title>
-	<meta name="description" content="Franklin, ID Weather">
+	<title id="pageTitle"> | Weather</title>
+	<meta name="description" content="Greenville, ID Weather">
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen">
 
@@ -18,33 +18,33 @@
 		<ul id="nav-list">
 			<li><a href="#" title="Go to the Weather Site home page">Current</a></li>
 			<li><a href="#" title="Current Conditions">Search</a></li>
-			<li><a href="#" title="Franklin, ID">Franklin</a></li>
-			<li><a href="greenville.html" title="Greenville, ID">Greenville</a></li>
+			<li><a href="franklin.html" title="Franklin, ID">Franklin</a></li>
+			<li><a href="#" title="Greenville, ID">Greenville</a></li>
 		</ul>
 	</nav>
 
-
-
-	<main id="main-content">
-	<header>
-		<h1 id="contentHeading">Franklin, Idaho</h1>
-		<p id="cityInfo">
-			<strong>Zip: </strong> <span id="zip">83237</span> |
-			<strong>Elevation: </strong>
-			<span id="elevationMeters">1514.246</span> <span id="elevationUnit">ft.</span> |
-			<strong>Location: </strong>
-			<span id="latitude">42.07</span>&deg; N, 
-			<span id="longitude"></span>111.79&deg; W
-		</p>
-	</header>
-
+	<section id="status">Please be patient while I get your weather information.</section>
+	
+	<main id="main-content" class="hide">
+		<header>
+			<h1 id="contentHeading">CityName, State</h1>
+			<p id="cityInfo">
+				<strong>Zip: </strong> <span id="zip">00000</span> |
+				<strong>Elevation: </strong>
+				<span id="elevationMeters">0.0</span> <span id="elevationUnit">ft.</span> |
+				<strong>Location: </strong>
+				<span id="latitude">0.0</span>&deg; N, 
+				<span id="longitude">0.0</span>&deg; W
+			</p>
+		</header>		
+	
 		<section id="curWeather">
 			<section id="Temperature" class="tile">
 				<h2>Temperature</h2>
 				<p></p>
 				<div class="tempBox">
-					<p id="temp"><span id="tempTemp">40</span>&deg;F</p>
-					<p><span id="high">64&deg;F</span> <span id="low">41&deg;F</span></p>
+					<p id="temp"><span id="tempTemp">00</span>&deg;F</p>
+					<p><span id="high">00</span>&deg;F <span id="low">00</span>&deg;F</p>
 					<p id="feelsLike">Feels Like <span id="feelTemp"><!--Determined by JavaScript--></span>&deg;F</p>
 				</div>
 			</section>
@@ -54,22 +54,22 @@
 				<div class="tempBox">
 					<div id=dialAndSpeed>
 						<div id="dial"></div>
-						<p id="windSpeed"><span id=windSpeed2>2</span> mph</p>
+						<p id="windSpeed"><span id=windSpeed2>0</span> mph</p>
 					</div>				
-					<p id="windInfo"><strong>Direction:</strong><span id="dialDir">ne</span><br>
-					<strong>Gusts: </strong><span id="windGusts">10-12</span> mph</p>
+					<p id="windInfo"><strong>Direction:</strong><span id="dialDir">??</span><br>
+					<strong>Gusts: </strong><span id="windGusts">0-0</span> mph</p>
 				</div>
 			</section>
 
 			<section id="CurrentConditions" class="tile">
-				<h2 id="Summary">Clear</h2>
+				<h2 id="Summary">summary...</h2>
 				<div id="conditionImage"></div>
 			</section>
 
 			<section id="HourlyForecast" class="tile">
 				<h2>Hourly Forecast</h2>
 				<ul id="hourly-forecast-list">
-					<li>11am: 41&deg;F | </li>
+					<!-- <li>11am: 41&deg;F | </li>
 					<li>&nbsp;12am: 41&deg;F | </li>
 					<li>&nbsp;2pm: 41&deg;F | </li>
 					<li>&nbsp;3pm: 41&deg;F | </li>
@@ -81,7 +81,7 @@
 					<li>&nbsp;8pm: 46&deg;F | </li>
 					<li>&nbsp;9pm: 49&deg;F | </li>
 					<li>&nbsp;10pm: 51&deg;F | </li>
-					<li>&nbsp;11pm: 55&deg;F</li>
+					<li>&nbsp;11pm: 55&deg;F</li> -->
 				</ul>
 			</section>
 		</section>
@@ -92,6 +92,7 @@
 	</footer>
 
 	<script src="js/functions.js"></script>
+	<script src="js/localdata.js"></script>
 
 </body>
 
