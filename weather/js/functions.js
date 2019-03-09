@@ -189,6 +189,7 @@ function changeSummaryImage(condition) {
 		const curWeather = document.getElementById("curWeather");
 		curWeather.setAttribute("class", "background" + image);
 		conditionImage.setAttribute("class", "summary" + image);
+		conditionImage.setAttribute("alt", "Picture of " + image);
 		console.log("changeSummaryImage() returned a valid value.");
 		return true; //a valid value was returned
 	} else {
