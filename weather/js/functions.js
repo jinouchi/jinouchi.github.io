@@ -343,16 +343,15 @@ function getWeather(stationId) {
 
 		// Temperature:
 		storage.setItem("tempCurrent", Math.round(convertToDegF(data.properties.temperature.value)));
-		//storage.setItem("tempHigh", data.properties.maxTemperatureLast24Hours.value);
-		//storage.setItem("tempLow", data.properties.minTemperatureLast24Hours.value);
-
+		
 		// Wind Chill:
 		storage.setItem("windChill", data.properties.windChill.value);
 		storage.setItem("windChillUnit", data.properties.windChill.unitCode);
 		
 		// Wind Speed
-		storage.setItem("windSpeed", data.properties.windSpeed.value);
+		storage.setItem("windSpeed", Math.round(data.properties.windSpeed.value));
 		storage.setItem("windSpeedUnit", data.properties.windSpeed.unitCode);
+		// If wind speed is undefined or null, display 0 instead:
 		if (document.getElementById("windSpeed2").innerText == "undefined" || document.getElementById("windSpeed2").innerText == "null")
 			document.getElementById("windSpeed2").innerText = 0;
 
@@ -480,6 +479,8 @@ function buildPage()
 	document.getElementById("Summary").innerText = storage.getItem("description");
 	document.getElementById("conditionImage").innerHTML = "<img src=" + storage.getItem("icon") + "></img>";
 
+	// background image
+	document.getElementById("curWeather").style = "background-image: url(" + storage.getItem("icon") + "); background-repeat: no-repeat; background-size: cover;";
 	// hide "status" and show <main>
 	document.getElementById("status").className = 'hide';
 	document.getElementById("main-content").className = '';
