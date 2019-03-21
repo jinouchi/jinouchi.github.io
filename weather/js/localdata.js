@@ -6,6 +6,7 @@ let statusContainer = document.getElementById('status');
 let contentContainer = document.getElementById('main-content');
 let weatherURL = "/weather/js/weather.json";
 
+
 //function calls
 fetchData(weatherURL);
 

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+	<meta charset="UTF-8">
+	<title id="pageTitle"> | Weather</title>
+	<meta name="description" content="Greenville, ID Weather">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/screen.css" media="screen">
+
+</head>
+
+<!--
+	Collaborators List: 
+		Justin Wilson ... Primary Author
+		Jonny ........... JavaScript Troubleshooting
+		Note: Collaboration was difficult this week as I was in
+		Washington for the Cyber Security Competition.
+-->
+
+<body>
+	<header id="pageHeader">
+		<h1 id="siteBrand">&#9748; The Weather Site</h1>
+	</header>
+
+	<nav id="page-nav">
+		<ul id="nav-list">
+			<li><a href="#" title="Go to the Weather Site home page">Current</a></li>
+			<li><a href="#" title="Current Conditions">Search</a></li>
+			<li><a href="franklin.html" title="Franklin, ID">Franklin</a></li>
+			<li><a href="#" title="Greenville, ID">Greenville</a></li>
+		</ul>
+	</nav>
+
+	<section id="status">Please be patient while I get your weather information.</section>
+	
+	<main id="main-content" class="hide" style="background-image: url(https://api.weather.gov/icons/land/day/rain?size=400); background-repeat: no-repeat; background-size: cover;">
+		<header>
+			<h1 id="contentHeading"><span id="city">CityName</span>, <span id="stateID">State</span></h1>
+			<p id="cityInfo">
+				<strong>Zip: </strong> <span id="zip">00000</span> |
+				<strong>Elevation: </strong>
+				<span id="elevationMeters">0.0</span> <span id="elevationUnit">ft.</span> |
+				<strong>Location: </strong>
+				<span id="latitude">0.0</span>&deg;,
+				<span id="longitude">0.0</span>&deg;
+			</p>
+		</header>		
+	
+		<section id="curWeather">
+			<section id="Temperature" class="tile">
+				<h2>Temperature</h2>
+				<p></p>
+				<div class="tempBox">
+					<p id="temp"><span id="tempTemp">00</span>&deg;F</p>
+					<p><span id="high">00</span>&deg;F <span id="low">00</span>&deg;F</p>
+					<p id="feelsLike">Feels Like <span id="feelsTemp"><!--Determined by JavaScript--></span>&deg;F</p>
+				</div>
+			</section>
+
+			<section id="Wind" class="tile">
+				<h2>Wind</h2>
+				<div class="tempBox">
+					<div id=dialAndSpeed>
+						<div id="dial"></div>
+						<p id="windSpeed"><span id=windSpeed2>0</span> mph</p>
+					</div>				
+					<p id="windInfo"><strong>Direction: </strong><span id="dialDir">??</span><br>
+					<strong>Gusts: </strong><span id="windGusts">0-0</span> mph</p>
+				</div>
+			</section>
+
+			<section id="CurrentConditions" class="tile">
+				<h2 id="Summary">summary...</h2>
+				<div id="conditionImage"></div>
+			</section>
+
+			<section id="HourlyForecast" class="tile">
+				<h2>Hourly Forecast</h2>
+				<ul id="hourly-forecast-list">
+					<!--Populated by JavaScript-->
+				</ul>
+			</section>
+		</section>
+
+	</main>
+	<footer>
+		&copy; &mdash; 2019, The Weather Site
+	</footer>
+	<script src="js/geo_loc.js"></script>
+
+	<script src="js/functions.js"></script>
+	<!-- <script src="js/localdata.js"></script> -->
+
+</body>
+
+</html>
