@@ -21,8 +21,8 @@ function getGeoLocation() {
 		 const lat = position.coords.latitude;							//save latitude to 'lat'
 		 const long = position.coords.longitude;						//save longitude to 'long'
 	  
-		 storage.setItem("lat", (Math.round(lat * 100000) / 100000));
-		 storage.setItem("long", (Math.round(long * 100000) / 100000));
+		 storage.setItem("lat", (Math.round(lat * 100000) / 100000));	//round latitude to 5 decimal places
+		 storage.setItem("long", (Math.round(long * 100000) / 100000));	//round longitude to 5 decimal places
 		 
 		 // Combine the values
 		 const locale = lat + "," + long;								//convert to string & save to 'locale'

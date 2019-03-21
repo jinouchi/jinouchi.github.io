@@ -450,6 +450,7 @@ function buildPage()
 	document.getElementById("dialDir").innerText = storage.getItem("windDirection");
 	document.getElementById("windSpeed2").innerText = storage.getItem("windSpeed");
 	document.getElementById("windGusts").innerText = storage.getItem("windGusts");
+	windDial(storage.getItem("windDirection"));
 	
 	// 3) send in the phrase to determine which weather background image should be shown
 	let summary = changeSummaryImage(storage.getItem("description"));
@@ -484,6 +485,9 @@ function buildPage()
 	// hide "status" and show <main>
 	document.getElementById("status").className = 'hide';
 	document.getElementById("main-content").className = '';
+
+	// Page Title
+	document.getElementById("pageTitle").innerText = storage.getItem("locName") + ", " + storage.getItem("locState") + " | Weather";
 }
 
 
