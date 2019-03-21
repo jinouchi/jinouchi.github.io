@@ -6,7 +6,7 @@ console.log('My javascript is being read.'); // test/debug code
 
 // Declare Variables
 		   //this definition provided for franklin only
-let temp = document.getElementById("tempTemp").innerText;
+//let temp = document.getElementById("tempTemp").innerText;
 // console.log("temp has been set to :" + temp);
 
 			//this definition provided for franklin only
@@ -35,9 +35,9 @@ var idHeader = {
 document.getElementById("dialDir").innerHTML = document.getElementById("dialDir").innerHTML.toUpperCase();
 
 //franklin function calls go here 
-windDial(direction); //rotate wind dial
+//windDial(direction); //rotate wind dial
 //buildWC(speed, temp); //determine wind chill ("Feels like")
-condition = getCondition(conditionDescription); //return starndardized condition from a variety of descriptions
+//condition = getCondition(conditionDescription); //return starndardized condition from a variety of descriptions
 //changeSummaryImage(condition);
 
 getHourly(storage.getItem("hourlyURL"));
@@ -53,12 +53,13 @@ function buildWC(speed, temp) {
 
 	// Round the answer down to integer
 	wc = Math.floor(wc);
+	console.log("Floored windchill: '" + wc + "'");
 
 	// If chill is greater than temp, return the temp
 	wc = (wc > temp) ? temp : wc;
 
 	// Display the windchill
-	console.log("Floored windchill: '" + wc + "'");
+	console.log("Final windchill: '" + wc + "'");
 	// feelTemp.innerHTML = wc;
 	return wc;
 }
@@ -114,6 +115,7 @@ function windDial(direction) {
 
 /* Begin Image stuff */
 
+//this is not used for Current weather page. Value retrieved from API is used. 
 function getCondition(conditionDescription) {
 
 	//define variables
@@ -158,6 +160,7 @@ function getCondition(conditionDescription) {
 	return result;
 }
 
+// THIS CODE IS NOT USED FOR CURRENT CONDITIONS PAGE. Summary from API is used. 
 function changeSummaryImage(condition) {
 
 	//define variables
@@ -204,7 +207,7 @@ function changeSummaryImage(condition) {
 		console.log("changeSummaryImage() returned a valid value.");
 		return true; //a valid value was returned
 	} else {
-		console.log("changeSummaryImage() returned an invalid value.");
+		console.log("changeSummaryImage() returned an invalid value. (NOTE: This function not used for current weather page.)");
 		return false; //and invalid value was returned
 	}
 }
@@ -269,8 +272,8 @@ function getLocation(locale) {
 	  console.log('Json object from getLocation function:'); 
 	  console.log(data);
 		// Store data to localstorage 
-		console.log(data.properties.relativeLocation.properties.city);
-		console.log(data.properties.relativeLocation.properties.state);
+		console.log("City: " + data.properties.relativeLocation.properties.city);
+		console.log("State: " + data.properties.relativeLocation.properties.state);
 	  storage.setItem("locName", data.properties.relativeLocation.properties.city); 
 	  storage.setItem("locState", data.properties.relativeLocation.properties.state); 
 		
@@ -431,11 +434,11 @@ function getWeather(stationId) {
 }
 
 buildPage();
+
 function buildPage()		
 {
 	// 1) calculate wind chill & inject temperatures
 	let wc = buildWC(storage.getItem("windSpeed"), storage.getItem("tempCurrent"));
-	console.log("wc: " + wc);
 
 	if (wc == "NaN")
 		document.getElementById("feelsTemp").innerText = storage.getItem("tempCurrent");
@@ -451,7 +454,7 @@ function buildPage()
 	document.getElementById("windSpeed2").innerText = storage.getItem("windSpeed");
 	document.getElementById("windGusts").innerText = storage.getItem("windGusts");
 	windDial(storage.getItem("windDirection"));
-	
+
 	// 3) send in the phrase to determine which weather background image should be shown
 	let summary = changeSummaryImage(storage.getItem("description"));
 	// NOTE: NWS IMAGES ARE AVAILABLE IN HOURLY DATA (PERIODS)
