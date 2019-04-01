@@ -110,14 +110,19 @@ footer {
 #productTitle { width: 100%; }
 
 #productPictureImg {
-	width: 100%;
+	max-width: 100%;
+
 }
 
 #productPicture {
-	width: 100%;
 }
 
-#bodyText { width: 100%; padding-left: 10px; padding-right: 10px; }
+#bodyText { 
+	width: 100%; 
+	padding-left: 10px; 
+	padding-right: 10px; 
+	font-family: Arial, Helvetica, sans-serif;
+}
 
 /******************** Classes: ********************/
 .navUL {
@@ -152,12 +157,15 @@ footer {
 }
 
 .bold { font-weight: bold; }
-.price { font-size: 2em; color: #de2226;}
+.price { 
+	font-size: 2em; 
+	color: #de2226;
+	font-weight: bold;
+}
 
 /********************************* Begin Media Queries *******************************/
 @media screen and (min-width: 700px) {
-	#productPictureImg { width: 100%; }
-	#productPicture { width: 50%; }
+	#productPicture { width: 50%; text-align: center;}
 
 	#flexContainer1 {
 		display: flex;
