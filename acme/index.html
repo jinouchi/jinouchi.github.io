@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" , initial-sale="1.0">
+	<title>ACME, Inc.</title>
+	<meta name="description" content="TITLE">
+	<meta name="author" content="AUTHOR">
+	<link rel="stylesheet" href="css/styles.css" media="screen">
+</head>
+
+<!-- 
+Collaborators:
+	1. Justin Wilson
+	2. Jonny Ruiz
+	3. Matt Hare 
+-->
+
+<body>
+	<header>
+		<img id="logo" src="images/site/logo.png">
+		<div id="nav"></div>
+	</header>
+	<main>
+		<!-- Home -->
+		<article id="home" class="">
+
+			<h1>Welcome to Acme!</h1>
+			<div id="featureDiv">
+				<img src="images/site/feature.jpg" id="feature">
+				<aside id="rocket">
+					<h1>Acme Rocket</h1>
+					<p>Quick lighting fuse<br>
+					NHTSA approved seat belts<br>
+					Mobile launch stand included</p>
+					<img id="iwantitnow" src="images/site/iwantit.gif">
+				</aside>
+			</div>
+			
+			<div id="flexContainer1">
+				<section id="recipes">
+					<h1>Featured Recipes</h1>
+					<table id="recipeTable">
+						<tr>
+							<td class="recipeCell"><img src="images/recipes/bbqsand.jpg"><br>Pulled Roadrunner BBQ</td>
+							<td class="recipeCell"><img src="images/recipes/potpie.jpg"><br>Roadrunner Pot Pie</td>
+						</tr>
+						<td class="recipeCell"><img src="images/recipes/soup.jpg"><br>Roadrunner Soup</td>
+						<td class="recipeCell"><img src="images/recipes/taco.jpg"><br>Roadrunner Tacos</td>
+					</table>
+				</section>
+
+				<section id="reviews">
+					<h1>Acme Rocket Reviews</h1>
+					<ul>
+						<li>"I dont know how I ever caught roadrunners before this." (4/5)</li>
+						<li>"That thing was fast!" (4/5)</li>
+						<li>"Talk about fast delivery." (5/5)</li>
+						<li>"I didn't even have to pull the meat apart." (4.5/5)</li>
+						<li>"I'm on my thirtieth one. I love these things!" (5/5)</li>
+					</ul>
+				</section>
+			</div>
+		</article>
+
+		<!-- Content -->
+		<article id="content" class="hide">
+			<h1 id="productTitle"></h1>
+			<br>
+			<div id="productPicture"></div>
+			<div id="bodyText">
+				<div id="productDescription"></div>
+				<br>
+				<div><p class="bold">Made by: <span id="pruductManufacturer"></span></p></div>
+				<div><p class="bold">Reviews: <span id="productReviews"></span></p></div>
+				<div><p class="price">Price: $<span id="productPrice"></span></p></div>
+			</div>
+		</article>
+
+	</main>
+
+	<footer>
+		<hr>
+		<p>&copy; 2019 ACME Inc., All rights reserved.<br>
+			All images used are believed to be in "Fair Use". Please notify the author if any are not and they will be
+			removed.</p>
+	</footer>
+
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

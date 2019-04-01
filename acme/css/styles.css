@@ -1,0 +1,161 @@
+/********************* HTML Tags: *********************/
+html {
+	box-sizing: border-box;
+	background-image: url("../images/site/background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: auto;
+	width: 80%;
+	text-align: center;
+	background-color: white;
+}
+
+header {
+	text-align: left;
+	width: 100%;
+	background-color: white;
+}
+
+nav {
+	background-color: #de2226;
+	width: 100%;
+	height: 50px;
+}
+
+ul li {
+	margin: 0px;
+}
+
+ul li button {
+	background-color: #de2226;
+	border: none;
+	color: white;
+	font-size: 16pt;
+	height: 60px;
+	padding-left: 10px;
+	padding-right: 15px;
+}
+
+main {
+	background-color: white;
+}
+
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2.2em;
+	margin-top: .2em;
+	margin-bottom: .2em;
+}
+
+article {
+	background-color: white;
+	text-align: left;
+	width: 100%;
+}
+
+footer {
+	text-align: center;
+	background-color: white;
+}
+
+/******************** Unique IDs: ********************/
+#logo {
+	max-width: 90%;
+	padding: 10px;
+}
+
+#feature {
+	width: 100%;
+}
+
+#featureDiv {
+	position: relative;
+}
+
+#rocket {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin-right: 20px;
+	margin-top: 20px;
+	max-width: 40%;
+	font-size: 2.2vw;
+	color: #de2226;
+	font-family: Arial, Helvetica, sans-serif; 
+	font-weight: bold;
+}
+
+#iwantitnow {
+	width: 100%;
+}
+
+#recipeTable {
+	width: 100%;
+}
+
+#flexContainer1 {
+	display: flex;
+	flex-flow: column-reverse;
+}
+
+#productTitle { width: 100%; }
+
+#productPictureImg {
+	width: 100%;
+}
+
+#productPicture {
+	width: 100%;
+}
+
+#bodyText { width: 45%; }
+
+/******************** Classes: ********************/
+.navUL {
+	list-style-type: none;
+	display: flex;
+	flex-flow: row;
+	background-color: #de2226;
+	padding: 0px;
+	flex-wrap: wrap;
+}
+
+.content {
+	width: 100%;
+	display: flex;
+	flex-flow: row;
+	flex-wrap: wrap;
+}
+
+.recipeCell {
+	text-align: center;
+	background-color: #EEEEEE;
+	width: 50%;
+	vertical-align: top;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: unset;
+}
+
+.bold { font-weight: bold; }
+.price { font-size: 2em; color: #de2226;}
+
+/********************************* Begin Media Queries *******************************/
+@media screen and (min-width: 700px) {
+	#productPictureImg { width: 100%; }
+	#productPicture { width: 50%; }
+}
