@@ -91,8 +91,8 @@ function navigate(input) {
 						let productDescription = data[input]["description"];
 						if (debug) console.log("productDescription = " + productDescription);						
 						
-						let pruductManufacturer = data[input]["manufacturer"];
-						if (debug) console.log("pruductManufacturer = " + pruductManufacturer);
+						let productManufacturer = data[input]["manufacturer"];
+						if (debug) console.log("productManufacturer = " + productManufacturer);
 						
 						let productReviews = data[input]["reviews"];
 						if (debug) console.log("productReviews = " + productReviews);
@@ -104,7 +104,7 @@ function navigate(input) {
 						document.getElementById("productTitle").innerText = productTitle;
 						document.getElementById("productPicture").innerHTML = "<img src=\"" + productPicture + "\" id=\"productPictureImg\">";
 						document.getElementById("productDescription").innerText = productDescription;
-						document.getElementById("pruductManufacturer").innerText = pruductManufacturer;
+						document.getElementById("productManufacturer").innerText = productManufacturer;
 						document.getElementById("productReviews").innerText = productReviews + "\/5 stars";
 						document.getElementById("productPrice").innerText = productPrice;
 						document.getElementById("pageTitle").innerText = productTitle + " | ACME, Inc."
