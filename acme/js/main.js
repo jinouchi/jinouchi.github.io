@@ -102,7 +102,7 @@ function navigate(input) {
 
 						// inject
 						document.getElementById("productTitle").innerText = productTitle;
-						document.getElementById("productPicture").innerHTML = "<img src=\"" + productPicture + "\" id=\"productPictureImg\">";
+						document.getElementById("productPicture").innerHTML = "<img src=\"" + productPicture + "\" id=\"productPictureImg\" alt=\"Product Image\">";
 						document.getElementById("productDescription").innerText = productDescription;
 						document.getElementById("productManufacturer").innerText = productManufacturer;
 						document.getElementById("productReviews").innerText = productReviews + "\/5 stars";
