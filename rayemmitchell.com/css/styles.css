@@ -1,0 +1,92 @@
+html {
+	width: 100%;
+	/* background-image: url("../images/main_character.png"); */
+}
+
+html::after {
+	content: "";
+	/* background: url("../images/main_character.png"); */
+	opacity: 0.1;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;   
+  }
+
+body {
+	width: 100%;
+	margin: auto;
+}
+
+nav {
+	display: flex;
+	flex-flow: row;
+	flex-wrap: nowrap;
+	width: 100%;
+	background-color: #5cd1ff;
+}
+
+nav #pageLinks a {
+	padding: 20px;
+	text-decoration: none;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+hr { margin: 0px; }
+
+#pageLinks {
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#socialMediaIcons {
+	height: 30px;
+	text-align: right;
+	padding-right: 5px;
+	margin-left: auto;    /* aligns to the right */
+}
+
+#socialMediaIcons img {
+	max-height: 100%;
+	padding: 2px;
+}
+
+#authorName * {
+	width: 100%;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 75pt;
+	margin: 0px;
+	text-align: center;
+}
+
+#body1 {
+	display: flex;
+	flex-flow: row;
+	width: 100%;
+	background-image: url("../images/paper_background.png"); /* Image Source: http://clipart-library.com/clipart/gie57eBzT.htm */ 
+	background-size: contain;
+	background-repeat: repeat-x;
+}
+
+#welcomeMessage {
+	width: 50%;
+	padding: 30px;
+	padding-top: 60px;
+	font-size: 16pt;
+	/* border-color: lightgray;
+	border-style: solid;
+	border-width: 1px; */
+}
+
+#authorImage {
+	width: 50%;
+	text-align: center;
+	/* border-color: lightgray;
+	border-style: solid;
+	border-width: 1px; */
+}
